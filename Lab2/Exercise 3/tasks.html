@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="tasks.css">
+</head>
+<body>
+    <h2>Task Board</h2>
+
+    <!-- Add new task -->
+    <div class="add-task-section">
+        <input type="text" id="taskInput" placeholder="Enter task name">
+        <button id="addBtn">Add Task</button>
+    </div>
+
+    <!-- Three columns -->
+    <div class="board">
+        <div class="column" id="todo" data-status="todo">
+            <h3>To Do</h3>
+            <div class="column-content"></div>
+        </div>
+
+        <div class="column" id="progress" data-status="progress">
+            <h3>In Progress</h3>
+            <div class="column-content"></div>
+        </div>
+
+        <div class="column" id="completed" data-status="completed">
+            <h3>Completed</h3>
+            <div class="column-content"></div>
+        </div>
+    </div>
+
+    <!-- Completion message -->
+    <div id="completionMsg" class="msg hidden">
+        Task Completed Successfully!
+    </div>
+
+    <script src="tasks.js"></script>
+</body>
+</html>

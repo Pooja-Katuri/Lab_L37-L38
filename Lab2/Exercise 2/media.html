@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Audio and Video</title>
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <h2>Multimedia Demo</h2>
+
+    <section class="player-section">
+        <h3>Audio Player</h3>
+        <audio id="myAudio" controls>
+            <!-- put an actual audio file in same folder and change src -->
+            <source src="musiccc.mp4" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p>Current time: <span id="audioTime">0.00</span> s</p>
+    </section>
+
+    <section class="player-section">
+        <h3>Video Player</h3>
+        <video id="myVideo" width="480" controls>
+            <!-- put an actual video file in same folder and change src -->
+            <source src="Crochet.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Current time: <span id="videoTime">0.00</span> s</p>
+    </section>
+
+    <script src="media.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.player-section {
+    margin: 20px auto;
+    width: 520px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+}
+
+.player-section h3 {
+    margin-top: 0;
+}
+video {
+    width: 500px;
+    height: auto;
+    border: 1px solid #333;   /* Just to see the video border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
