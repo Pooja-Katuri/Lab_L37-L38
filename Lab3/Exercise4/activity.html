@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Activity Monitor</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: white;
+    width: 500px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .log {
+    height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 13px;
+    background: #fafafa;
+  }
+
+  .warning {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .reset {
+    background: #dc3545;
+    color: white;
+  }
+
+  .export {
+    background: #007bff;
+    color: white;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>User Activity Monitor</h2>
+
+  <input type="text" placeholder="Click / Type / Focus here">
+
+  <div class="log" id="log"></div>
+
+  <div class="warning" id="warning"></div>
+
+  <button class="export" onclick="exportLog()">Export Activity Log</button>
+  <button class="reset" onclick="resetLog()">Reset Log</button>
+</div>
+
+<script src="activity.js"></script>
+</body>
+</html>

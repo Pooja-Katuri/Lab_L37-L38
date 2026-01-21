@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multi-Step Form</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: white;
+    width: 420px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .progress {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    margin: 15px 0;
+  }
+
+  .progress-bar {
+    height: 8px;
+    width: 0%;
+    background: #007bff;
+    border-radius: 5px;
+    transition: width 0.3s;
+  }
+
+  .stage {
+    display: none;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .error {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  button {
+    width: 48%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .next {
+    background: #007bff;
+    color: white;
+  }
+
+  .prev {
+    background: #6c757d;
+    color: white;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Registration Wizard</h2>
+
+  <div class="progress">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <form id="multiForm">
+
+    <!-- Stage 1 -->
+    <div class="stage" id="stage1">
+      <input type="text" id="name" placeholder="Full Name">
+      <div class="error" id="error1"></div>
+      <button type="button" class="next" onclick="nextStage(1)">Next</button>
+    </div>
+
+    <!-- Stage 2 -->
+    <div class="stage" id="stage2">
+      <input type="email" id="email" placeholder="Email">
+      <div class="error" id="error2"></div>
+      <button type="button" class="prev" onclick="prevStage(2)">Back</button>
+      <button type="button" class="next" onclick="nextStage(2)">Next</button>
+    </div>
+
+    <!-- Stage 3 -->
+    <div class="stage" id="stage3">
+      <input type="password" id="password" placeholder="Password">
+      <div class="error" id="error3"></div>
+      <button type="button" class="prev" onclick="prevStage(3)">Back</button>
+      <button type="button" class="next" onclick="nextStage(3)">Next</button>
+    </div>
+
+    <!-- Stage 4 -->
+    <div class="stage" id="stage4">
+      <input type="number" id="age" placeholder="Age">
+      <div class="error" id="error4"></div>
+      <button type="button" class="prev" onclick="prevStage(4)">Back</button>
+      <button type="submit" class="next">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+<script src="multistep.js"></script>
+</body>
+</html>

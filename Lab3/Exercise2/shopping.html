@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Intelligent Shopping Cart</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: white;
+    width: 420px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  select, input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #218838;
+  }
+
+  .cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+  .total {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .remove {
+    color: red;
+    cursor: pointer;
+    float: right;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Shopping Cart</h2>
+
+  <select id="product">
+    <option value="">Select Product</option>
+    <option value="Laptop|60000|Electronics">Laptop</option>
+    <option value="Phone|30000|Electronics">Phone</option>
+    <option value="Book|500|Education">Book</option>
+    <option value="Pen|20|Education">Pen</option>
+  </select>
+
+  <input type="number" id="quantity" placeholder="Quantity" min="1">
+
+  <button onclick="addToCart()">Add to Cart</button>
+
+  <input type="text" id="coupon" placeholder="Coupon Code (SAVE10 / EDU5)">
+
+  <div id="cart"></div>
+
+  <div class="total" id="totalPrice">Total: ₹0</div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

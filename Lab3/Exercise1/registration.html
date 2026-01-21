@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Adaptive Registration Form</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: #ffffff;
+    width: 380px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  textarea {
+    resize: none;
+    height: 60px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+
+  #skillsContainer {
+    display: none;
+  }
+
+  #errorMsg {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Registration</h2>
+
+  <form id="form">
+    <input type="text" id="name" placeholder="Full Name" required>
+
+    <input type="email" id="email" placeholder="Email">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+    <input type="number" id="age" placeholder="Age">
+
+    <select id="role">
+      <option value="">Select Role</option>
+      <option value="Student">Student</option>
+      <option value="Teacher">Teacher</option>
+      <option value="Admin">Admin</option>
+    </select>
+
+    <div id="skillsContainer">
+      <textarea id="skills" placeholder="Enter Skills"></textarea>
+    </div>
+
+    <p id="errorMsg"></p>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
