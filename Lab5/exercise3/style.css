@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0fbf8a,#036f79);
+    padding:30px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#e20d0d;
+}
+
+form{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    margin-bottom:20px;
+}
+
+input,button{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:#068486;
+    color:white;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{ background:#119489; }
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#08948d;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+.action-btn{
+    padding:6px 10px;
+    border:none;
+    border-radius:5px;
+    color:white;
+    cursor:pointer;
+    margin:2px;
+}
+
+.edit{ background:#38a169; }
+.delete{ background:#e53e3e; }
+
+#message{
+    text-align:center;
+    margin-bottom:12px;
+    font-weight:bold;
+}
