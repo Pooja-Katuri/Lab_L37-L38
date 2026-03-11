@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Online Book Finder</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#557290;
+text-align:center;
+padding:20px;
+}
+
+.container{
+width:800px;
+margin:auto;
+}
+
+input,button,select{
+padding:10px;
+margin:5px;
+}
+
+.book{
+background:white;
+
+
+
+max-width:600px;
+padding:15px;
+margin:100px;
+border-radius:25px;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>📚 Online Book Finder</h1>
+
+<input id="search" placeholder="Search by title">
+
+<button onclick="searchBook()">Search</button>
+
+<select onchange="filterCategory(this.value)">
+<option value="">Filter Category</option>
+<option value="Programming">Programming</option>
+<option value="AI">AI</option>
+<option value="Data Science">Data Science</option>
+</select>
+
+<button onclick="sortPrice()">Sort by Price</button>
+
+<button onclick="sortRating()">Sort by Rating</button>
+
+<button onclick="topBooks()">Top Rated</button>
+
+<div id="books"></div>
+
+<button onclick="loadMore()">Load More</button>
+
+<script>
+
+let page=1;
+
+async function displayBooks(url){
+
+const res=await fetch(url);
+const data=await res.json();
+
+let html="";
+
+data.forEach(book=>{
+
+html+=`
+<div class="book">
+
+<b>${book.title}</b><br>
+Author: ${book.author}<br>
+Category: ${book.category}<br>
+Price: ₹${book.price}<br>
+Rating: ${book.rating}
+
+</div>
+`;
+
+});
+
+document.getElementById("books").innerHTML=html;
+
+}
+
+function searchBook(){
+
+const title=document.getElementById("search").value;
+
+displayBooks("http://localhost:3000/books/search?title="+title);
+
+}
+
+function filterCategory(cat){
+
+displayBooks("http://localhost:3000/books/category/"+cat);
+
+}
+
+function sortPrice(){
+
+displayBooks("http://localhost:3000/books/sort/price");
+
+}
+
+function sortRating(){
+
+displayBooks("http://localhost:3000/books/sort/rating");
+
+}
+
+function topBooks(){
+
+displayBooks("http://localhost:3000/books/top");
+
+}
+
+function loadMore(){
+
+displayBooks("http://localhost:3000/books/page/"+page);
+
+page++;
+
+}
+
+displayBooks("http://localhost:3000/books");
+
+</script>
+
+</body>
+</html>

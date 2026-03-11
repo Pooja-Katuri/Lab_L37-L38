@@ -1,0 +1,16 @@
+{
+  "name": "student-notes",
+  "version": "1.0.0",
+  "description": "Student Notes Manager using MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongodb": "^7.1.0"
+  }
+}
