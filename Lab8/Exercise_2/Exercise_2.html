@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Object Input</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            text-align: center;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 250px auto;
+            width: 320px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            padding: 10px;
+            margin: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff7e5f;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e85a3f;
+        }
+
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Student Details</h2>
+
+    <input type="number" id="id" placeholder="Enter ID"><br>
+    <input type="text" id="name" placeholder="Enter Name"><br>
+    <input type="text" id="dept" placeholder="Department"><br>
+    <input type="number" id="marks" placeholder="Marks"><br>
+
+    <button onclick="showDetails()">Show Details</button>
+    <button onclick="showUpdated()">Updated Details</button>
+
+    <div id="output"></div>
+</div>
+
+<script src="Exercise_2.js"></script>
+
+</body>
+</html>
